@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Job Application Portal</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Fixed Header -->
+  <header class="site-header">
+    <h1>Job Application Portal</h1>
+  </header>
+
+  <!-- Dark/Light Mode Toggle -->
+  <button id="modeToggle" aria-label="Toggle dark/light mode">🌙</button>
+
+  <!-- Main Container -->
+  <main class="container" role="main">
+    <form id="multiStepForm" autocomplete="off" name="job-application" method="POST"
+      action="https://script.google.com/macros/s/AKfycbzz4BSI5Mvlfr0d2u8_Y-nX88u9HOT5bwYZgZoVWADilv6UrjmzgQJn8mqUUkJpKxtvOw/exec">
+
+      <ul id="progressbar">
+        <li class="active">Personal</li>
+        <li>Questions</li>
+        <li>Payment</li>
+        <li>Finish</li>
+      </ul>
+
+      <!-- Step 1 -->
+      <fieldset class="active">
+        <h2 class="fs-title">Personal Details</h2>
+        <input type="text" name="fullname" placeholder="Full Name" required />
+        <input type="number" name="age" placeholder="Age" min="18" required />
+
+        <select name="gender" required>
+          <option value="" disabled selected>Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+
+        <input type="text" name="qualification" placeholder="Qualification" required />
+        <input type="text" name="location" placeholder="Location" required />
+
+        <input type="tel" name="contact" id="contact" placeholder="Contact No. (10 digits)" pattern="[0-9]{10}"
+          maxlength="10" required />
+
+        <input type="email" name="email" id="email" placeholder="Gmail ID (e.g. abc@gmail.com)"
+          pattern="[a-zA-Z0-9._%+-]+@gmail\.com$" required />
+
+        <input type="text" name="referral" placeholder="Referral Code" />
+
+        <button type="button" class="next">Next</button>
+      </fieldset>
+
+      <!-- Step 2 -->
+      <fieldset>
+        <h2 class="fs-title">Job Questions</h2>
+
+        <div class="form-question">
+          <span>When dealing with a difficult customer, should we remain calm and focus on finding a resolution to their
+            problem?</span>
+          <div class="option-row">
+            <input type="radio" id="cust-true" name="customer" value="True" required />
+            <label for="cust-true">True</label>
+          </div>
+          <div class="option-row">
+            <input type="radio" id="cust-false" name="customer" value="False" />
+            <label for="cust-false">False</label>
+          </div>
+        </div>
+        <div class="form-question">
+          <span>Do you have any work experience?</span>
+          <div class="option-row">
+            <input type="radio" id="exp-yes" name="experience" value="Yes" required />
+            <label for="exp-yes">Yes</label>
+          </div>
+          <div class="option-row">
+            <input type="radio" id="exp-no" name="experience" value="No" />
+            <label for="exp-no">No</label>
+          </div>
+        </div>
+
+        <div class="form-question">
+          <span>All job interview has the same objective?</span>
+          <div class="option-row">
+            <input type="radio" id="obj-true" name="objective" value="True" required />
+            <label for="obj-true">True</label>
+          </div>
+          <div class="option-row">
+            <input type="radio" id="obj-false" name="objective" value="False" />
+            <label for="obj-false">False</label>
+          </div>
+        </div>
+        <div class="form-question">
+          <span>Is a job interview a formal meeting between a job seeker and an employer?</span>
+          <div class="option-row">
+            <input type="radio" id="relocate-yes" name="relocate" value="Yes" required />
+            <label for="relocate-yes">Yes</label>
+          </div>
+          <div class="option-row">
+            <input type="radio" id="relocate-no" name="relocate" value="No" />
+            <label for="relocate-no">No</label>
+          </div>
+        </div>
+        <!-- End Addition -->
+
+        <button type="button" class="previous">Previous</button>
+        <button type="button" class="next">Next</button>
+      </fieldset>
+
+
+      <!-- Step 3 -->
+      <fieldset>
+        <h2 class="fs-title">Payment</h2>
+        <p>For further process you will be charged a security fees of 100Rs. Which is for sharing your detials to the
+          reputed organization and for verifying that you are really interested for this job profile</p>
+        <img src="images/QR.jpeg" alt="QR Code" class="qr" />
+        <input type="text" name="utr" placeholder="UTR/Transaction No." required />
+        <label for="proof">Upload Payment Screenshot (optional):</label>
+        <input type="file" id="proof" name="proof" accept="image/*" />
+        <button type="button" class="previous">Previous</button>
+        <button type="button" class="next">Next</button>
+      </fieldset>
+
+      <!-- Step 4 -->
+      <fieldset>
+        <h2 class="fs-title">Success!</h2>
+        <div class="success-message">
+          <svg width="60" height="60" viewBox="0 0 60 60" aria-hidden="true" focusable="false">
+            <circle cx="30" cy="30" r="28" stroke="#37d67a" stroke-width="4" fill="none"></circle>
+            <path d="M18 32 L27 41 L43 23" stroke="#37d67a" stroke-width="4" fill="none"></path>
+          </svg>
+          <p>
+            Payment successful.<br />
+            For submitting your application, please click on the submit button.
+          </p>
+        </div>
+        <button type="button" class="previous">Previous</button>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-content">
+
+      <p class="footer-credit">
+        Website &copy; 2025 by
+        <a href="https://amarnathchoudhary9971.github.io/Portfolio-Amar/" target="_blank">Amarnath Choudhary</a><br />
+        Want your own website? <a href="mailto:amar8920844395@gmail.com">Contact Me</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
