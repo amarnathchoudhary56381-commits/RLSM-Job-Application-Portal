@@ -90,9 +90,8 @@ applicationForm.addEventListener("submit", function (e) {
             <path d="M18 32 L27 41 L43 23" stroke="#37d67a" stroke-width="4" fill="none"></path>
           </svg>
           <p>
-            Your form is submitted and our team will connect you shortly.<br />
+           Your details have been shared to reputed organization and you will be receiving a mail within 24 hrs. In which you will be informed about the furthe process.<br />
             Thank you for applying!<br />
-            If you need any kind of help, please contact our support.
           </p>
         </div>
       `;
