@@ -90,7 +90,7 @@ applicationForm.addEventListener("submit", function (e) {
             <path d="M18 32 L27 41 L43 23" stroke="#37d67a" stroke-width="4" fill="none"></path>
           </svg>
           <p>
-           Your details have been shared to reputed organization and you will be receiving a mail within 24 hrs. In which you will be informed about the furthe process.<br />
+            Your details have been shared to reputed organization and you will be receiving a mail within 24 hrs. In which you will be informed about the furthe process.<br />
             Thank you for applying!<br />
           </p>
         </div>
